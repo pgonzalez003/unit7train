@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="style/text" href="assets/css/reset.css">
+        <link rel="stylesheet" type="style/text" href="assets/css/style.css">
+
+    </head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                          <h1 class="display-4">Platform</h1>
+                          <p class="lead">Never miss the train agian!</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        Current Train Schedule
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped" id="infoTable">
+                            <thead>
+                                <tr>
+                                <th scope="col" id="trainName">Train Name</th>
+                                <th scope="col" id="destination">Destination</th>
+                                <th scope="col" id="frequency">Frequency (min)</th>
+                                <th scope="col" id="nextArrival">Next Arrival</th>
+                                <th scope="col" id="minutesAway">Minutes Away</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        Add Train
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Train Name</label>
+                                <input type="name" class="form-control" id="trainName" placeholder="Gordon the Big Engine">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Destination</label>
+                                <input type="destination" class="form-control" id="destination" placeholder="Albuquerque">                                
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect2">First Train Time (HH:mm - military time)</label>
+                                <input type="firstTime" class="form-control" id="firstTrainTime" placeholder="24:00">                           
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Frequency (min)</label>
+                                <input type="frequency" class="form-control" id="frequency" placeholder="15">
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-success" id="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+
+
+
+</html>
