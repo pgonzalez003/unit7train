@@ -62,31 +62,18 @@ var config = {
         "<td>" + Frequency + "</td>",
         "<td>" + nextTrainTime + "</td>",
         "<td>" + minUntilNext + "</td>"
-       ))
-        // Train Time logic
+       ));
+       
+
+    })
+        
+    
+        //Moment logic 
+    
         var currentTime = moment();
         var firstTimeConverted = moment(newFirstTrainTime, "hh:mm").subtract(1, "years");
         var timeDiff = moment().diff(moment(firstTimeConverted), "minutes")
         var timeRemainder = timeDiff % newFrequency
         var minUntilNext = newFrequency - timeRemainder
         var nextTrainTime = moment().add(minUntilNext, "minutes").format("hh:mm")
-
-        // Console log time logic
-        // console.log(currentTime.format("hh:mm"))
-        // console.log(firstTimeConverted)
-        // console.log(timeDiff)
-        // console.log(timeRemainder)
-        // console.log(minUntilNext)
-        // console.log(nextTrainTime)
-
-        // Append new data into display table
-        $("#infoTable").append("<tr></tr>").append(
-            "<td>" + newTrainName + "</td>",
-            "<td>" + newDestination + "</td>",
-            "<td>" + newFrequency + "</td>",
-            "<td>" + nextTrainTime + "</td>",
-            "<td>" + minUntilNext + "</td>")
-
-    }) //END OF ON CHILD ADDED EVENT
-
-}) //END OF DOCUMENT READ
+//END OF DOCUMENT READ
